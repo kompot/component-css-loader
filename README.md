@@ -3,7 +3,7 @@
 [Webpack](webpack.github.io) loader that provides simple convention on how to
 organize component's stylesheets.
 
-_If component has an associated stylesheets, stylesheets file should has the
+_If component has an associated stylesheets, stylesheets file *}should has the
 same name (except extension of cource) and be placed in the same directory. When
 component is required stylesheets file will be required as well._
 
@@ -14,11 +14,6 @@ npm install --save-dev component-css-loader
 ```
 
 ## Usage
-
-### Avaliable queries
-
-At the moment, only single query is avalible: `ext`. It allows to specify
-extension name of stylesheets file.
 
 In config file:
 
@@ -41,6 +36,11 @@ var Button = require('component-css?ext=styl!./components/button/button.jsx');
 ```
 
 Read more about [webpack loaders](http://webpack.github.io/docs/using-loaders.html).
+
+## Avaliable queries
+
+At the moment, only single query is avalible: `ext`. It allows to specify
+extension name of stylesheets file.
 
 ## Example
 
