@@ -3,8 +3,8 @@
 [Webpack](webpack.github.io) loader that provides simple convention on how to
 organize component's stylesheets.
 
-_If component has an associated stylesheets, stylesheets file should has the
-same name (except extension of cource) and be placed in the same directory. When
+_If component has an associated stylesheets, **stylesheets file should has the
+same name** (except extension of cource) and be **placed in the same directory**. When
 component is required stylesheets file will be required as well._
 
 ## Installation
