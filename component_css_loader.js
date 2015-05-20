@@ -6,6 +6,7 @@ module.exports = function(source) {
 
   var query = loaderUtils.parseQuery(this.query);
   var ext = query.ext || 'styl';
+  var varName = query.varName;
 
   var componentFileName = this.resourcePath.match(/[^\/]+$/)[0];
   var componentExt = componentFileName.match(/\.(.+)$/)[1];
@@ -15,7 +16,10 @@ module.exports = function(source) {
   try {
     var stats = fs.statSync(stylePath);
     if (stats.isFile()) {
-      return "require('./" + styleFileName + "');\n" + source;
+      var prefix = varName
+          ? ('var ' + varName + ' = ')
+          : '';
+      return prefix + "require('./" + styleFileName + "');\n" + source;
     }
   } catch(e) {}
 
