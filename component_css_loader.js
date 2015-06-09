@@ -17,7 +17,7 @@ module.exports = function(source) {
     var stats = fs.statSync(stylePath);
     if (stats.isFile()) {
       var prefix = varName
-          ? ('var ' + varName + ' = ')
+          ? ('const ' + varName + ' = ')
           : '';
       return prefix + "require('./" + styleFileName + "');\n" + source;
     }
